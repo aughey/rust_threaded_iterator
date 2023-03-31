@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'threaded_iterators'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=threaded_iterators",
+                    "--package=threaded_iterators"
+                ],
+                "filter": {
+                    "name": "threaded_iterators",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'threaded_iterators'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=threaded_iterators",
+                    "--package=threaded_iterators"
+                ],
+                "filter": {
+                    "name": "threaded_iterators",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
